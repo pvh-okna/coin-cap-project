@@ -1,0 +1,82 @@
+
+.wrapperRow{
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 1200px;
+  width: 100%;
+  border-top: 1px solid #ababab;
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+
+}
+.coinRank{
+width: 8%;
+text-align: left;
+}
+.coinName{
+display: flex;
+flex-flow: column;
+  text-align: left;
+  justify-content: center;
+  width: 15%;
+  height: 70px;
+}
+.coinSymbol{
+  color: gray;
+}
+.coinPrice{
+  width: 12%;
+  text-align: left;
+}
+.coinMarketCap{
+width: 10%;
+}
+.coinVwap{
+  width:10% ;
+  padding-left: 5px;
+}
+.coinSupply{
+width: 10%;
+  padding-left: 5px;
+}
+.coinVolume{
+width: 10%;
+}
+.coinChange{
+width: 10%;
+}
+.wrapperTHead{
+
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+  margin-left: -13px;
+  height: 30px;
+}
+.btnAdd{
+  width: 30px;
+  height: 30px;
+  font-size: 26px;
+  text-align: center;
+
+}
+.btnAdd:hover{
+  background-color: #ababab;
+  border: 1px solid gray;
+}
+.wrapperTable{
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  border:1px solid #afafaf;
+  border-radius: 5px;
+  box-shadow: 0 5px 24px 2px rgba(34, 60, 80, 0.2);
+}
+.coinHRank{
+  width: 8%;
+}
