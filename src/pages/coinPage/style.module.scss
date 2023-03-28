@@ -1,0 +1,47 @@
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif;
+  text-align: left;
+}
+.name {
+  text-align: left;
+  font-weight: 700;
+  font-size: 32px;
+  padding-left: 5% ;
+}
+.symbol {
+  padding-left: 5% ;
+  color: #a8a8a8;
+  text-align: left;
+  margin-bottom: 10px;
+}
+.supply,.price,.changePer,.supply,.marketCap,.volume {
+  display: flex;
+  justify-content: space-between;
+  width: 380px;
+  color:  #7c7c7c;
+  text-decoration: underline;
+  padding-bottom: 10px;
+  padding-left: 5% ;
+}
+.info{
+  font-weight: bold;
+  color: #292954;
+  text-decoration: none;
+}
+.arrow{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+ font-size: 36px;
+  color: #a8a8a8;
+  cursor: pointer;
+}
+.wrapperInfo{
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
