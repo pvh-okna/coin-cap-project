@@ -1,13 +1,13 @@
 import styles from "./style.module.scss";
-import Index from "./modalItem";
 
 type ModalType = {
   isVisible?: boolean;
+  content?: any;
   title?: string;
   onClose?: any;
 };
 
-const Modal = ({ isVisible = false, title, onClose }: ModalType) => {
+const Modal = ({ isVisible = false, title, onClose, content }: ModalType) => {
   return !isVisible ? null : (
     <div className={styles.modal} onClick={onClose}>
       <div className={styles.modalDialog} onClick={(e) => e.stopPropagation()}>
@@ -16,11 +16,9 @@ const Modal = ({ isVisible = false, title, onClose }: ModalType) => {
           <span className={styles.modalClose} onClick={onClose}></span>
         </div>
         <div className={styles.modalBody}>
-          <div className={styles.modalContent}>
-            <Index />
-          </div>
+          <div className={styles.modalContent}>{content}</div>
         </div>
-        <div className={styles.modalFooter}>footer</div>
+        <div className={styles.modalFooter}></div>
       </div>
     </div>
   );

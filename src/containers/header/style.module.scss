@@ -1,22 +1,24 @@
 .wrapperHeader {
-  width: 100%;
+
   height: 60px;
   padding: 15px;
-  background: rgb(97,202,84);
-  background: radial-gradient(circle, rgba(97,202,84,1) 0%, rgba(103,202,82,1) 100%);
+
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Roboto", sans-serif;
   color: snow;
   letter-spacing : 2px;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
+
+
 }
 .wrapperHeadItem {
 }
 .headItem {
   width: 200px;
   font-weight: 700;
+
 }
 .basket {
 
@@ -24,3 +26,45 @@
   cursor: pointer;
   font-size: 24px;
 }
+.fix{
+  width: 100%;
+  height: 60px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  color: snow;
+  letter-spacing : 2px;
+  margin-bottom: 10px;
+  position: fixed;
+  background: rgb(97,202,84);
+  background: radial-gradient(circle, rgba(97,202,84,1) 0%, rgba(103,202,82,1) 100%);
+}
+.amountCart{
+
+}
+.difference{margin: 0 10px;
+
+}
+.difPer{
+
+}
+@media (max-width: 500px) {
+span{
+  display: none;
+}
+  .headItem{
+    display: none;
+  }
+}
+@media (max-width: 850px) {
+ .fix{
+   font-size: 14px;
+   font-weight: 400;
+ }
+  .headItem {
+    width: 100px;
+  }
+
+  }
