@@ -1,28 +1,17 @@
 import { useEffect, useState } from "react";
-import { CoinRequest, ItemsType } from "../type";
-
-export const useCoins = () => {
-  const [error, setError] = useState(null);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [items, setItems] = useState({});
+import { ItemsType } from "../type";
+import axios from "axios";
+export const useCoins = (inView: boolean) => {
+  const [coins, setCoins] = useState<ItemsType[]>([]);
+  const [currentPage, setCurrentRage] = useState(0);
 
   useEffect(() => {
-    // const interval = setInterval(() => {
-
-    fetch("https://api.coincap.io/v2/assets")
-      .then((res) => res.json())
-      .then(
-        (data) => {
-          setIsLoaded(true);
-          setItems(data);
-        },
-
-        (error) => {
-          setIsLoaded(true);
-          setError(error);
-        }
-      );
-  }, []);
-
-  return { error, items, isLoaded };
+    axios
+      .get(`https://api.coincap.io/v2/assets?limit=10&offset=${currentPage}`)
+      .then((res) => {
+        setCoins([...coins, ...res.data.data]);
+        setCurrentRage((prevState) => prevState + 10);
+      });
+  }, [inView]);
+  return coins;
 };
