@@ -1,17 +1,11 @@
 .wrapperRow {
+display: flex;
   align-content: center;
   align-items: center;
   justify-content: center;
   text-align: center;
   max-width: 1200px;
   width: 100%;
-  border-top: 1px solid #ababab;
-  display: flex;
-  font-family: "Roboto", sans-serif;
-  cursor: pointer;
-  &:hover {
-    background-color: #c9c9c9;
-  }
 }
 .coinRank {
   width: 8%;
@@ -57,17 +51,16 @@
   display: flex;
   font-family: "Roboto", sans-serif;
   margin-left: -13px;
-  height: 30px;
+  height: 40px;
+
 }
 .btnAdd {
   width: 30px;
-  height: 11px;
+  height: 30px;
   font-size: 26px;
   text-align: center;
-  margin-left: auto;
   position: relative;
-  top: -44px;
-  right: 52px;
+  right: 44px;
   &:hover {
     background-color: #ababab;
     border: 1px solid gray;
@@ -75,7 +68,7 @@
 }
 
 .wrapperTable {
-  margin: 0 auto;
+  margin: 0 auto ;
   max-width: 1200px;
   width: 100%;
   border: 1px solid #afafaf;
@@ -84,4 +77,50 @@
 }
 .coinHRank {
   width: 8%;
+}
+.wrapper{
+
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 1200px;
+  width: 100%;
+  border-top: 1px solid #ababab;
+  display: flex;
+
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+  &:hover {
+    background-color: #c9c9c9;
+  }
+}
+@media (max-width: 500px) {
+  .wrapper{
+    max-width: 500px;
+    font-size: 14px;
+  }
+  .coinMarketCap,.coinVolume,.coinVwap,.coinSupply  {
+    display: none;
+  }
+.wrapperRow{
+  justify-content: space-evenly
+}
+  .wrapperTHead{
+    justify-content: space-evenly
+  }
+}
+@media (max-width: 850px) {
+  .wrapper{
+    max-width: 850px;
+  }
+  .coinVolume,.coinVwap,.coinSupply  {
+    display: none;
+  }
+  .wrapperRow{
+    justify-content: space-evenly
+  }
+  .wrapperTHead{
+    justify-content: space-evenly
+  }
 }

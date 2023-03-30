@@ -59,3 +59,18 @@
     background-color: #5B5A62;
   }
 }
+@media (max-width: 500px) {
+  .wrapper {
+    max-width: 500px;
+  }
+}
+@media (max-width: 850px) {
+  .wrapper {
+    max-width: 850px;
+  }
+  .btn{
+    width: 20%;
+    font-size: 20px;
+    margin-left: 40px;
+  }
+}

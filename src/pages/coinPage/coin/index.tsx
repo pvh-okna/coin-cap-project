@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router";
 import styles from "../style.module.scss";
 import { useCoin } from "../../../hooks/useCoin";
+import Modal from "../../modal";
+import ModalAdd from "../../../components/modalAdd";
 
 const CoinItems = () => {
   const routeParams = useParams();
   const coinId = String(routeParams.id);
   const arr: any = useCoin(coinId);
+  const [isModal, setModal] = useState(false);
 
   if (arr) {
     return (
@@ -47,7 +50,20 @@ const CoinItems = () => {
               </span>
             </div>
           </div>
-          <button className={styles.btn}>ADD TO BAG </button>
+          <button
+            className={styles.btn}
+            onClick={() => {
+              setModal(true);
+            }}
+          >
+            ADD TO CART
+          </button>
+          <Modal
+            isVisible={isModal}
+            title={"Add to cart"}
+            content={<ModalAdd props={arr} />}
+            onClose={() => setModal(false)}
+          />
         </div>
       </>
     );

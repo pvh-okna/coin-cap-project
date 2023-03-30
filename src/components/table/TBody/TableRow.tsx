@@ -1,23 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./style.module.scss";
 import { useNavigate } from "react-router-dom";
+import Modal from "../../../pages/modal";
+import ModalItem from "../../../pages/modal/modalItem";
+import ModalAdd from "../../modalAdd";
 
 const TableRow = ({ props }: any) => {
+  const [isModal, setModal] = useState(false);
   const navigate = useNavigate();
   const clickCoin = (id: string) => {
     navigate(`/coin/${id}`);
     window.scroll({ top: 0 });
   };
 
-  const handleCoin = (name: string, price: string, id: string) => {
-    const storageArr = JSON.parse(localStorage.getItem("bag")!) || [];
-    storageArr.push({ id: id, name: name, price: price });
-    localStorage.setItem("bag", JSON.stringify(storageArr));
-  };
-
   return (
     <>
-      <>
+      <div className={styles.wrapper}>
         <div className={styles.wrapperRow} onClick={() => clickCoin(props.id)}>
           <div className={styles.coinRank}>{props.rank}</div>
           <div className={styles.coinName}>
@@ -43,16 +41,21 @@ const TableRow = ({ props }: any) => {
             {Number(props.changePercent24Hr).toFixed(2)}%
           </div>
         </div>
-
         <div
           className={styles.btnAdd}
           onClick={() => {
-            handleCoin(props.name, props.priceUsd, props.id);
+            setModal(true);
           }}
         >
           +
         </div>
-      </>
+      </div>
+      <Modal
+        isVisible={isModal}
+        title={"Add to cart"}
+        content={<ModalAdd props={props} />}
+        onClose={() => setModal(false)}
+      />
     </>
   );
 };
