@@ -15,7 +15,6 @@ const Layout = () => {
         <Route path={"coin/:id"} element={<CoinPage />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
-
       <Footer />
     </>
   );

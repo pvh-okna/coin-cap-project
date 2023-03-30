@@ -61,9 +61,13 @@
 }
 .btnAdd {
   width: 30px;
-  height: 30px;
+  height: 11px;
   font-size: 26px;
   text-align: center;
+  margin-left: auto;
+  position: relative;
+  top: -44px;
+  right: 52px;
   &:hover {
     background-color: #ababab;
     border: 1px solid gray;
