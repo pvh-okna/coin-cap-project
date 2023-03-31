@@ -1,8 +1,6 @@
 .wrapperHeader {
-
   height: 60px;
   padding: 15px;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,17 +8,13 @@
   color: snow;
   letter-spacing : 2px;
   margin-bottom: 10px;
-
-
 }
 
 .headItem {
   width: 200px;
   font-weight: 700;
-
 }
 .basket {
-
   color: #133610;
   cursor: pointer;
   font-size: 24px;
@@ -41,8 +35,8 @@
   background: radial-gradient(circle, rgba(97,202,84,1) 0%, rgba(103,202,82,1) 100%);
 }
 
-.difference{margin: 0 10px;
-
+.difference{
+  margin: 0 10px;
 }
 
 @media (max-width: 500px) {
