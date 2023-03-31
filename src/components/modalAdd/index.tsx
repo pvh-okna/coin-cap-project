@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import { ClickBtn } from "../../utils/getLocalStorage";
 import Input from "../input";
+import { CoinType, ItemsType } from "../../type";
 
-const ModalAdd = (props: any) => {
+export type ModalType = {
+  props: ItemsType;
+};
+const ModalAdd = (props: ModalType) => {
   const [value, setValue] = useState("");
-  const handleClear = (e: any) => {
+  const handleClear = (e: React.MouseEvent<HTMLElement>) => {
     e.preventDefault();
     setValue("");
   };

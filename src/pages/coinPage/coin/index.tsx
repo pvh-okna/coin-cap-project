@@ -4,11 +4,12 @@ import styles from "../style.module.scss";
 import { useCoin } from "../../../hooks/useCoin";
 import Modal from "../../modal";
 import ModalAdd from "../../../components/modalAdd";
+import { ItemsType } from "../../../type";
 
 const CoinItems = () => {
   const routeParams = useParams();
   const coinId = String(routeParams.id);
-  const arr: any = useCoin(coinId);
+  const arr: ItemsType = useCoin(coinId) as ItemsType;
   const [isModal, setModal] = useState(false);
 
   if (arr) {

@@ -10,6 +10,7 @@ const TableBody = () => {
   });
 
   const coins = useCoins(inView);
+
   return (
     <>
       {coins.map((coin: ItemsType) => (

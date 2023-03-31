@@ -14,4 +14,11 @@ export type ItemsType = {
   priceUsd: string;
   changePercent24Hr: string;
   vwap24Hr: string;
+  explorer?: string;
+};
+export type CoinType = {
+  id: string;
+  name: string;
+  price: string;
+  quantity: string;
 };

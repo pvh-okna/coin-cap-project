@@ -1,18 +1,20 @@
 import React from "react";
+import { CoinType } from "../../../type";
 import { Items } from "./item";
 
 const ModalItem = () => {
   const modalArr = JSON.parse(localStorage.getItem("bag")!);
   let amount = 0;
   for (let key in modalArr) {
-    amount += modalArr[key].price;
+    amount += Number(modalArr[key].price);
   }
+
   return (
     <>
-      {modalArr.map((coin: any) => (
+      {modalArr.map((coin: CoinType) => (
         <Items props={coin} key={coin.id} />
       ))}
-      <div>Amount {amount.toFixed(2)}</div>
+      <div>Amount {Number(amount).toFixed(2)}</div>
     </>
   );
 };

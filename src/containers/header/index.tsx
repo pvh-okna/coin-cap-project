@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styles from "./style.module.scss";
-import { ItemsType } from "../../type";
 import Modal from "../../pages/modal";
 import { useCoinsHeader } from "../../hooks/useCoinsHeader";
 import { BsFillBagFill } from "react-icons/bs";
@@ -8,10 +7,9 @@ import ModalItem from "../../pages/modal/modalItem";
 import { useAmount } from "../../hooks/useAmount";
 
 const Header = () => {
-  const coins: any = useCoinsHeader();
+  const coins: {}[] = useCoinsHeader();
   let amount = 0;
   let amountNow = 0;
-  let quantity = [];
   let ids = [];
   const [isModal, setModal] = useState(false);
   const itemArr = JSON.parse(localStorage.getItem("bag")!) || [];
@@ -37,10 +35,13 @@ const Header = () => {
           <div className={styles.fix}>
             <div className={styles.wrapperHeadItem}></div>
             <>
-              {coins.map((coin: ItemsType) => (
+              {coins.map((coin: any) => (
                 <div className={styles.headItem} key={coin.id}>
                   {coin.name}
-                  <span> ${Number(coin.priceUsd).toFixed(2)} </span>
+                  <span className={styles.price}>
+                    {" "}
+                    ${Number(coin.priceUsd).toFixed(2)}{" "}
+                  </span>
                 </div>
               ))}
             </>
