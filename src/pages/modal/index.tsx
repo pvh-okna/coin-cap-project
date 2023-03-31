@@ -1,10 +1,11 @@
 import styles from "./style.module.scss";
+import React from "react";
 
 type ModalType = {
   isVisible?: boolean;
-  content?: any;
+  content?: React.ReactNode;
   title?: string;
-  onClose?: any;
+  onClose?: React.ReactEventHandler<{}>;
 };
 
 const Modal = ({ isVisible = false, title, onClose, content }: ModalType) => {

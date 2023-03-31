@@ -5,16 +5,19 @@ import { render } from "react-dom";
 import App from "../../../../App";
 import Header from "../../../../containers/header";
 import { ClickCoin } from "../../../../utils/getLocalStorage";
-
-export const Items = ({ props }: any) => {
+import { CoinType } from "../../../../type";
+type LocalType = {
+  props: CoinType;
+};
+export const Items = (props: LocalType) => {
   return (
     <>
       <div className={styles.wrapper}>
-        <div>{props.name}</div>
-        <div>${Number(props.price).toFixed(2)}</div>
+        <div>{props.props.name}</div>
+        <div>${Number(props.props.price).toFixed(2)}</div>
         <div
           onClick={() => {
-            ClickCoin(props.id);
+            ClickCoin(props.props.id);
           }}
         >
           <RxCross1 className={styles.cross} />

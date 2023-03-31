@@ -13,8 +13,7 @@
 
 
 }
-.wrapperHeadItem {
-}
+
 .headItem {
   width: 200px;
   font-weight: 700;
@@ -41,17 +40,13 @@
   background: rgb(97,202,84);
   background: radial-gradient(circle, rgba(97,202,84,1) 0%, rgba(103,202,82,1) 100%);
 }
-.amountCart{
 
-}
 .difference{margin: 0 10px;
 
 }
-.difPer{
 
-}
 @media (max-width: 500px) {
-span{
+.price{
   display: none;
 }
   .headItem{
